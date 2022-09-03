@@ -10,6 +10,8 @@
   --link-color: #ffffff99;
   --btn-background: #f5f4fa;
   --border-color: #ececec;
+  --icon-social-color: #afb1b8;
+  --background-icon-footer: #ffffff1a;
   /*shadow*/
   --button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -31,6 +33,9 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+a {
+  text-decoration: none;
 }
 .container {
   width: 1200px;
@@ -149,21 +154,34 @@ body {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
-}
-.nav-link:hover {
-  color: var(--focus-hover-color);
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
+.nav-link:hover,
 .nav-link:focus {
   color: var(--focus-hover-color);
+  fill: var(--focus-hover-color);
   background-color: var(--active-color);
 }
+.icon-header {
+  fill: currentColor;
+}
+
 /*section 1*/
 .hero {
   background-color: var(--brand-color);
   padding-top: 200px;
   padding-bottom: 210px;
+  background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+    url(/images/main/section-under-header/Img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-tittle {
@@ -217,6 +235,15 @@ body {
   letter-spacing: 0.03em;
   display: flex;
   gap: 30px;
+}
+.box-logo {
+  height: 120px;
+  background-color: var(--btn-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 .main-sub {
   font-weight: 700;
@@ -288,6 +315,7 @@ body {
 .card-photo {
   padding-bottom: 30px;
   padding-top: 30px;
+  background-color: var(--active-color);
 }
 
 .team-article {
@@ -297,6 +325,62 @@ body {
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.social {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-social-color);
+  background-color: var(--active-color);
+  border-radius: 50px;
+}
+.social:hover,
+.social:focus {
+  background-color: var(--focus-hover-color);
+  fill: var(--active-color);
+}
+
+/*Our clients*/
+
+.list-clients {
+  display: flex;
+
+  gap: 30px;
+}
+
+.box-clients {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+}
+.clients-link {
+  fill: var(--icon-social-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--focus-hover-color);
+  color: var(--focus-hover-color);
+  border-color: var(--focus-hover-color);
+  background-color: var(--active-color);
+}
+
+.clients-link {
+  padding: 16px 32px;
+  border: 1px solid var(--icon-social-color);
+  border-radius: 4px;
 }
 
 /*footer*/
@@ -358,6 +442,45 @@ body {
 .address-link:focus {
   color: var(--focus-hover-color);
   background-color: var(--brand-color);
+}
+/*social-footer*/
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  gap: 70px;
+}
+.footer-list-social {
+  display: flex;
+  gap: 10px;
+}
+.social-tittle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--active-color);
+  margin-bottom: 20px;
+}
+.link-social-footer {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-social-color);
+  background-color: var(--background-icon-footer);
+  border-radius: 50px;
+}
+
+.icon-footer {
+  fill: var(--active-color);
+}
+.link-social-footer:hover,
+.link-social-footer:focus {
+  fill: currentColor;
+  background-color: var(--focus-hover-color);
 }
 
 /*pages 2 porfolio*/
@@ -423,6 +546,12 @@ body {
   flex-wrap: wrap;
   gap: 30px;
 }
+.section-list:hover,
+.section-list:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .box-img {
   border-bottom: 1px solid var(--img-color);
   border-left: 1px solid var(--img-color);
