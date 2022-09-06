@@ -530,7 +530,7 @@ body {
 .btn-first-button{padding:6px 25px}
 
 .btn-button:hover,
-.btn-button :focus {
+.btn-button:focus{
   background-color: var(--focus-hover-color);
   color: var(--active-color);
   cursor: pointer;
